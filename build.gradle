@@ -1,0 +1,30 @@
+plugins {
+	id 'java-library'
+	id 'io.freefair.lombok' 		version "$lombokVersion"
+	id 'org.springframework.boot' 	version "$springBootVersion"
+}
+
+group = "$PROJECT_GROUPNAME"
+version = "$PROJECT_VERSION"
+description = 'Pet project using Java-Spring, Gradle and LDAP'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+// repositories allowed to management dependencies
+apply from: "$rootDir/config/gradle/repositories.gradle"
+
+dependencies {
+	// for Application Programming Interface (API) RESTfull context
+	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+	implementation "org.springframework.boot:spring-boot-starter-security:$springBootVersion"
+
+	// Authentication (LDAP)
+	implementation "org.springframework.boot:spring-boot-starter-data-ldap:$springBootVersion"
+	implementation "org.springframework.security:spring-security-ldap:$springFwkVersion"
+	implementation "org.springframework.ldap:spring-ldap-core:$springLDAPVersion"
+	implementation "com.unboundid:unboundid-ldapsdk:$ldapSdkVersion"
+
+	// A document to functiontionality expose for each entry point
+	implementation "io.springfox:springfox-boot-starter:$swaggerVersion"
+}

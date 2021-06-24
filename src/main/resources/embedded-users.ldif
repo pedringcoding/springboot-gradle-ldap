@@ -1,0 +1,13 @@
+dn: dc=indracompany,dc=com
+objectClass: top
+objectClass: domain
+
+dn: uid=standard,dc=indracompany,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: standard
+sn: standard
+uid: standard
+userPassword:: c3RhbmRhcmQ=
