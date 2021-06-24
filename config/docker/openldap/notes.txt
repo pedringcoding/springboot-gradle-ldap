@@ -1,0 +1,3 @@
+Create openldap, localhost:389 (HTTP) y localhost:636 (HTTPS)
+
+Users: cn=[standard],ou=users,dc=indracompany,dc=com and password [standard]
