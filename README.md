@@ -24,7 +24,7 @@ choco install gradle --version 5.6.4 -y
 
 Clone this repository, and fire up a command-line tool.
 
-> To know the API documentation technique.
+> To know the API securization methods.
 
 ## :computer: Commands to execute
 
